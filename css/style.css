@@ -1,0 +1,662 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Zerando CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* all similar content styling codes */
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Navbar Ínicio */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 0;
+    background: rgb(166, 81, 245);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar .logo span:hover{
+    filter: brightness(50%);
+}
+.navbar .logo a span{
+    color: rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: white;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+.navbar .menu li a:hover{
+    color: rgb(166, 81, 245);
+    transition: all 0.2s ease;
+}
+.navbar.sticky .menu li a:hover{
+    filter: brightness(50%);
+}
+
+/* Todos os códigos similares */
+section{
+    padding: 100px 0;
+}
+.about .about-content,
+.services .serv-content, 
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 300px;
+    height: 0.1px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(166, 81, 245);
+    padding: 0 2px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+/*  Menu  Mobile */
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    width: 42px;
+    height: 45px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    background: rgb(166, 81, 245);
+    box-shadow: 0px 0px 30px rgb(166, 81, 245);
+    border-radius: 50px;
+    font-size: 30px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+    box-shadow: 0px 0px 60px rgb(166, 81, 245);
+}
+
+/* Sessão Ínicio */
+.home{
+    display: flex;
+    background: url("../img/morfey-banner-1680-832.png") no-repeat center;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 2px solid rgb(166, 81, 245);
+    box-shadow: inset 0px 1em 20em #000;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .max-width .row{
+    margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 15px;
+}
+.home .home-content .text-2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: -3px;
+    text-transform: uppercase;
+}
+.home .home-content .text-3{
+    font-size: 25px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: rgb(166, 81, 245);
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+}
+
+/* Sessão Sobre */
+.about{
+    padding-bottom: 2%;
+    padding-top: 5%;
+}
+.about .max-width{
+    border: 2px solid rgb(166, 81, 245);
+    background-image: url(../img/fundo-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgb(0, 0, 0);
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
+.about .title::after{
+    content: "Quem sou eu";
+}
+.about .about-content .left{
+    flex: 21rem;
+}
+.about .about-content .left img{
+    width: 50%;
+    object-fit: contain;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+.about .about-content .right{
+    flex: 30rem;
+    margin-top: 170px;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+.about .about-content .right .text span{
+    color: rgb(166, 81, 245);
+}
+.about .about-content .right p{
+    text-align: justify;
+    color: white;
+}
+.about .about-content .right a{
+    display: inline-flex;
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.about .about-content .right a img{
+    margin-left: 10px;
+    align-items: left;
+    justify-content: left;
+}
+.about .about-content .right a:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+}
+
+/*  Sessão Serviços */
+.services{
+    background-image: url(../img/notebook-00.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid rgb(166, 81, 245);
+    box-shadow: 0px 0px 50px #000;
+    padding-top: 70px;
+    height: 110vh;
+    
+}
+.services .title{
+    color: #fff;
+}
+.services .title::before,
+.teams .title::before{
+    background: white;
+}
+.services .title::after,
+.teams .title::after{
+    background: #000;
+    content: "Desenvolvidos";
+}
+.hero{
+    width: 100%;
+    height: 70vh;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-row{
+    display: flex;
+    width: 3200px;
+    transition: 0.5s;
+}
+.slide-col{
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+.user-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%;
+}
+.user-img img{
+    height: 90%;
+    border-radius: 10px;
+}
+.primeira{
+    background-image: url(../img/Project\ Lorem\ -\ 01.png);
+    background-size: cover;
+    width: 520px;
+    height: 250px;
+    position: absolute;
+    left: 50px;
+    top: 10%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    color: #d3d4d6;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.primeira:hover{
+    border-top: 2px solid rgb(166, 81, 245);
+    border-left: 2px solid rgb(166, 81, 245);
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+.segunda{
+    background-image: url(../img/Project\ Lorem\ -\ 03.png);
+    background-size: cover;
+    width: 520px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    color: #d3d4d6;
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.user-text p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.user-text{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.user-text h3{
+    margin-left: 20px;
+}
+.slide-col .link-site{
+    width: 20px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    filter: brightness(50%);
+}
+.container{
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.indicator{
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    bottom: -15%;
+}
+.botao{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: rgb(166, 81, 245);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.botao:hover{
+    filter: brightness(60%);
+    width: 16px;
+}
+.ativar{
+    width: 45px;
+}
+.ativar:hover{
+    width: 46px;
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+}
+.testimonial{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*  Sessão Habilidades */
+.skills{
+    padding-top: 70px;
+}
+.skills .title::after{
+    content: "Que possuo";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+    font-size: 15px;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 16px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid rgb(166, 81, 245);
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+    margin: auto 0 auto 0px;
+}
+.skills .skills-content .right .bars img{
+    width: 130px;
+    height: 150px;
+    justify-content: flex-start; 
+    margin-left: 0px;
+}
+.skills .skills-content .right .bars .html-83:hover{
+    transform: scale(1.05);
+    transition: 0s;
+}
+.skills .skills-content .right .bars .css-63:hover{
+    transform: scale(1.05);
+    transition: 0s;
+}
+.skills .skills-content .right .bars .js-42:hover{
+    transform: scale(1.05);
+    transition: 0s;
+}
+.skills .skills-content .right .info{ 
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.skills .skills-content .right .info .html-83{
+    display: inline-table;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+.skills .skills-content .right .info .css-63{
+    display: inline-table;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+.skills .skills-content .right .info .js-42{
+    display: inline-table;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+.skills .skills-content .right span{
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(166, 81, 245);
+}
+
+/* Sessão Contato */
+.contact{
+    border-top: 2px solid rgb(166, 81, 245);
+    box-shadow: 0px 0px 50px #000;
+    width: 100%;
+    background-image: url(../img/planet.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+.contact .title::before{
+    background: white;
+}
+.contact .title::after{
+    background: #111;
+    box-shadow: 0px 0px 100px rgb(173, 25, 25);
+    border-radius: 80%;
+    content: "Fale comigo";
+}
+.contact .contact-content{
+    align-items: flex-start;
+}
+.contact .contact-content .column{
+    width: calc(50% - 10px);
+}
+.contact .contact-content .text{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    font-size: 15px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .left .redes-sociais img{
+    width: 30px;
+    margin: 20px 20px 0px 0px;
+}
+.contact .contact-content .left .redes-sociais img:hover{
+    transform: scale(1.10);
+    filter: brightness(60%);
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+    font-size: 15px;
+}
+.contact .contact-content .row .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .row .info .sub-title{
+    color: white;
+}
+.contact .contact-content .row img{
+    width: 30px;
+    color: white;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    width: 90%;
+    height: 85%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+.contact .right form .name{
+    margin-right: 30px;
+}
+.contact .right form .sobrenome{
+    margin-right: 30px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textarea{
+    width: 100%;
+    height: 80px;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    width: 150px;
+    height: 35px;
+    margin-top: -10px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(166, 81, 245);
+    background: rgb(166, 81, 245);
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: rgb(166, 81, 245);
+    box-shadow: 0px 0px 20px rgb(166, 81, 245);
+    background: none;
+}
+
+/*  Sessão footer  */
+.footer{
+    background: rgb(0, 0, 0);
+    padding: 15px 23px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 70px;
+    box-shadow: 0px 0px 50px #000;
+}
+.footer img{
+    width: 5%;
+    position: absolute;
+    left: 0;
+}
+.footer p{
+    text-align: center;
+    padding: 15px 0px;
+}
